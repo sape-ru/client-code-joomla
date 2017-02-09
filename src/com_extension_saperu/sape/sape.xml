@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="library" version="2.5" method="upgrade">
+    <name>SAPE LIBRARY</name>
+	<libraryname>sape</libraryname>
+	<description>SAPE LIBRARY.</description>
+	<creationDate>2016-04-01</creationDate>
+	<author>sape.ru</author>
+	<authorEmail></authorEmail>
+	<authorUrl></authorUrl>
+	<copyright></copyright>
+	<license></license>
+	<version>0.0.2</version>
+	<packager></packager>
+	<packagerurl></packagerurl>
+	<install> <!-- Runs on install -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+    <files folder="sape">
+		<file>sape.php</file>
+		<folder>sql</folder>
+	</files>
+</extension>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="identical" label="COM_SAPERU_SETTINGS_DETAILS" description="COM_SAPERU_SETTINGS_DETAILS_DESC">
+        <field
+            name="id"
+            type="hidden"
+        />
+        <field
+                name="SAPE_USER"
+                type="text"
+                label="COM_SAPERU_SETTINGS_USER_LABEL"
+                description="COM_SAPERU_SETTINGS_USER_DESC"
+                size="40"
+                class="inputbox"
+                required="true"
+                default=""
+        />
+    </fieldset>
+    <fieldset name="monitization" label="COM_SAPERU_SETTINGS_MONITIZATION" description="COM_SAPERU_SETTINGS_MONITIZATION_DESC">
+
+        <field
+                name="links"
+                type="radio"
+                label="COM_SAPERU_SETTINGS_LINKS_LABEL"
+                description="COM_SAPERU_SETTINGS_LINKS_DESC"
+                value="true"
+                default="0"
+        >
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        <field
+                name="context"
+                type="radio"
+                label="COM_SAPERU_SETTINGS_CONTEXT_LABEL"
+                description="COM_SAPERU_SETTINGS_CONTEXT_DESC"
+                value="true"
+                default="0"
+        >
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        <field
+                name="articles"
+                type="radio"
+                label="COM_SAPERU_SETTINGS_ARTICLES_LABEL"
+                description="COM_SAPERU_SETTINGS_ARTICLES_DESC"
+                value="true"
+                default="0"
+        >
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        <field
+                name="tizer"
+                type="radio"
+                label="COM_SAPERU_SETTINGS_TIZER_LABEL"
+                description="COM_SAPERU_SETTINGS_TIZER_DESC"
+                value="true"
+                default="0"
+        >
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        <field
+            name="tizerImage"
+            type="category"
+            extension="com_saperu"
+            class="inputbox"
+            default=""
+            label="COM_SAPERU_SETTINGS_TIZERIMAGE_LABEL"
+            description="COM_SAPERU_SETTINGS_TIZERIMAGE_DESC"
+            required="true" >
+            <option value="0">img.php</option>
+            <option value="1">image.php</option>
+            <option value="2">photo.php</option>
+            <option value="3">wp-img.php</option>
+            <option value="4">wp-image.php</option>
+            <option value="5">wp-photo.php</option>
+        </field>
+        <field
+                name="RTB"
+                type="radio"
+                label="COM_SAPERU_SETTINGS_RTB_LABEL"
+                description="COM_SAPERU_SETTINGS_RTB_DESC"
+                value="true"
+                default="0"
+        >
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        <field
+                name="force_show_code"
+                type="radio"
+                label="COM_SAPERU_SETTINGS_FSC_LABEL"
+                description="COM_SAPERU_SETTINGS_FSC_DESC"
+                value="true"
+                default="0"
+        >
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+
+
+    </fieldset>
+</form>
