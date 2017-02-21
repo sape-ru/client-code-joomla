@@ -1,4 +1,4 @@
-# client-code-wordpress
+# client-code-joomla
 
 ## RU
 
