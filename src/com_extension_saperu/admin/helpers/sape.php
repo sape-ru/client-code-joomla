@@ -1,12 +1,4 @@
 <?php
-/**
- * @package     Joomla.Site
- * @subpackage  mod_banners
- *
- * @copyright   Copyright (C) 2005 - 2016 Open Source Matters, Inc. All rights reserved.
- * @license     GNU General Public License version 2 or later; see LICENSE.txt
- */
-
 defined('_JEXEC') or die;
 
 class SaperuHelper  extends JHelperContent
@@ -25,7 +17,7 @@ class SaperuHelper  extends JHelperContent
     {
 
         JModelLegacy::addIncludePath(JPATH_ADMINISTRATOR . '/components/com_saperu/models/', 'SettingsModel');
-        JModelLegacy::addIncludePath(JPATH_ADMINISTRATOR . '/components/com_saperu/tables/', 'SettingsTable');
+        JModelLegacy::addTablePath(JPATH_ADMINISTRATOR . '/components/com_saperu/tables/', 'SettingsTable');
 
         $model = JModelLegacy::getInstance('Settings', 'SaperuModel', array('ignore_request' => true));
         $item = $model->getItem(1);
@@ -133,7 +125,7 @@ class SaperuHelper  extends JHelperContent
 
     public static function initSape()
     {
-        $SS = SaperuModelSettings::getInstance('Settings', 'SaperuModel')->getItem(1);
+        $SS = self::getSapeSettings();
 
         if(!defined('_SAPE_USER')){
             define('_SAPE_USER', $SS->SAPE_USER);
