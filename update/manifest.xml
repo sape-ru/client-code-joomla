@@ -64,4 +64,20 @@
 		</tags>
 		<targetplatform name="joomla" version="3" />
 	</update>
+	<update>
+		<name>Saperu Component</name>
+		<description>Joomla! Saperu Component Update Package</description>
+		<element>com_extension_saperu</element>
+		<type>package</type>
+		<version>0.06</version>
+		<client>site</client>
+		<infourl title="Weblinks Extension Package">https://github.com/sape-ru/client-code-joomla/releases/tag/v0.06</infourl>
+		<downloads>
+			<downloadurl type="full" format="zip">https://github.com/sape-ru/client-code-joomla/blob/v0.06/component/com_extension_saperu-v0.06.zip?raw=true</downloadurl>
+		</downloads>
+		<tags>
+			<tag>v0.05</tag>
+		</tags>
+		<targetplatform name="joomla" version="3" />
+	</update>
 </updates>

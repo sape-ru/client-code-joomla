@@ -20,7 +20,7 @@
  */
 class SAPE_base
 {
-    protected $_version = '1.4.2';
+    protected $_version = '1.4.3';
 
     protected $_verbose = false;
 
@@ -1412,11 +1412,7 @@ class SAPE_client extends SAPE_base
     protected function _save_data($data, $filename = '')
     {
         if ($this->_split_data_file) {
-            if ($this->_multi_site) {
-                $directory = dirname(__FILE__) . '/' . $this->_host . '/';
-            } else {
-                $directory = dirname(__FILE__) . '/';
-            }
+            $directory = dirname(__FILE__) . '/';
             $hashArray = array();
             $data = $this->_uncode_data($data);
             foreach ($data as $url => $item) {
@@ -1424,6 +1420,9 @@ class SAPE_client extends SAPE_base
                     $currentFile = 'links.meta.db';
                 } else {
                     $currentFile = 'links.' . crc32($url) % 100 . '.db';
+                }
+                if ($this->_multi_site) {
+                    $currentFile = $this->_host . '.' . $currentFile;
                 }
                 $hashArray[$currentFile][$url] = $item;
             }
@@ -1819,11 +1818,7 @@ class SAPE_context extends SAPE_base
     protected function _save_data($data, $filename = '')
     {
         if ($this->_split_data_file) {
-            if ($this->_multi_site) {
-                $directory = dirname(__FILE__) . '/' . $this->_host . '/';
-            } else {
-                $directory = dirname(__FILE__) . '/';
-            }
+            $directory = dirname(__FILE__) . '/';
             $hashArray = array();
             $data = $this->_uncode_data($data);
             foreach ($data as $url => $item) {
@@ -1831,6 +1826,9 @@ class SAPE_context extends SAPE_base
                     $currentFile = 'words.meta.db';
                 } else {
                     $currentFile = 'words.' . crc32($url) % 100 . '.db';
+                }
+                if ($this->_multi_site) {
+                    $currentFile = $this->_host . '.' . $currentFile;
                 }
                 $hashArray[$currentFile][$url] = $item;
             }
@@ -2338,5 +2336,10 @@ class SAPE_articles extends SAPE_base
         if (isset($data['__sape_page_obligatory_output__'])) {
             $this->_page_obligatory_output = $data['__sape_page_obligatory_output__'];
         }
+    }
+
+    protected function _get_meta_file()
+    {
+        return $this->_get_db_file();
     }
 }
