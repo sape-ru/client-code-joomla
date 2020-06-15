@@ -2,12 +2,12 @@
 <extension version="3.1" type="component" method="upgrade">
 	<name>Saperu</name>
 	<author>Sape.ru</author>
-	<creationDate>2018</creationDate>
+	<creationDate>2020</creationDate>
 	<copyright>Copyright</copyright>
 	<license>GNU</license>
 	<authorEmail>support@sape.ru</authorEmail>
 	<authorUrl>https://www.sape.ru</authorUrl>
-	<version>0.0.5</version>
+	<version>0.0.7</version>
 	<description>Sape.ru Интеграция</description>
 	<files folder="site">
 		<filename>index.html</filename>
